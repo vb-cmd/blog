@@ -1,0 +1,1 @@
+json.array! @articles, partial: 'link', as: :article_link

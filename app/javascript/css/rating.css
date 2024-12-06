@@ -1,0 +1,11 @@
+.rating {}
+
+.rating-stars {
+    font-size: 2rem;
+    background-image: linear-gradient(to right, #FE6B8B 0%, #FF8E53 100%);
+}
+
+
+.rating-stars>button:hover {
+    background-color: lightcoral !important;
+}

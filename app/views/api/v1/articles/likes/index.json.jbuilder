@@ -1,0 +1,1 @@
+json.rating @article.average_rating

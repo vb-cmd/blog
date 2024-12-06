@@ -1,6 +1,4 @@
 class User < ApplicationRecord
-  has_many :articles
-
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable,
@@ -14,6 +12,10 @@ class User < ApplicationRecord
   validates :birth_date, presence: true
   validates :password, confirmation: true
   validates :password_confirmation, presence: true
+
+  has_many :articles, dependent: :destroy
+  has_many :likes, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
   def full_name
     "#{firstname} #{lastname}"

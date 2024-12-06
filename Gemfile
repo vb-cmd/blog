@@ -4,7 +4,6 @@ source 'https://rubygems.org'
 gem 'rails', '~> 8.0.0'
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
 gem 'propshaft'
-# Use sqlite3 as the database for Active Record
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '>= 5.0'
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
@@ -58,8 +57,17 @@ group :development do
   gem 'web-console'
 end
 
+# Add support for precompiling assets with webpack
 gem 'shakapacker', '~> 8.0'
 
+# Use Devise for authentication and authorization
 gem 'devise', '~> 4.9'
 
-gem 'pg', '~> 1.5'
+# Use PG as the database for Active Record
+gem "pg", "~> 1.5"
+
+# Use Kaminari for pagination
+gem "kaminari", "~> 1.2"
+
+# Use Ransack for advanced searching
+gem "ransack", "~> 4.2"

@@ -56,8 +56,11 @@ RSpec.describe Article, type: :model do
 
   describe '#description' do
     let(:article) { build(:article, body: Faker::Lorem.paragraph * 10, user: user) }
-    it 'returns a truncated description' do
-      expect(article.description).to eq article.body.truncate(Article::MAX_DESCRIPTION_LENGTH)
+
+    it 'should be a truncated version of the body' do
+      description = article.body.truncate(Article::MAX_DESCRIPTION_LENGTH, separator: Article::SEPARATOR)
+
+      expect(article.description.length).to eq description.length
     end
   end
 end
