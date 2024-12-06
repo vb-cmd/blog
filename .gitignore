@@ -46,4 +46,4 @@ yarn-debug.log*
 # Ignore sorbet
 sorbet
 
-.DS_store
+**/.DS_Store
